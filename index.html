@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cipher Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Готово для GitHub Pages</p>
+        <h1>Cipher Lab</h1>
+        <p class="hero-text">
+          Веб-приложение для шифрования и расшифровки текста на русском и английском.
+          Работает прямо в браузере, без сервера.
+        </p>
+      </div>
+      <div class="hero-badges">
+        <span>Русский</span>
+        <span>English</span>
+        <span>10 шифров</span>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card controls-card">
+        <div class="card-title-row">
+          <h2>Параметры</h2>
+          <button id="swapBtn" class="secondary-btn" type="button">Поменять поля</button>
+        </div>
+
+        <div class="form-grid">
+          <label>
+            <span>Шифр</span>
+            <select id="cipherSelect">
+              <option value="caesar">Шифр Цезаря</option>
+              <option value="ascii">ASCII</option>
+              <option value="koi8">KOI8-R</option>
+              <option value="morse">Азбука Морзе</option>
+              <option value="vigenere">Шифр Виженера</option>
+              <option value="bacon">Шифр Бэкона</option>
+              <option value="atbash">Шифр Атбаша</option>
+              <option value="gronsfeld">Шифр Гронсфельда</option>
+              <option value="polybius">Шифр Квадрат Полибия</option>
+              <option value="playfair">Шифр Плейфера</option>
+            </select>
+          </label>
+
+          <label>
+            <span>Действие</span>
+            <select id="actionSelect">
+              <option value="encrypt">Зашифровать</option>
+              <option value="decrypt">Расшифровать</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="optionsPanel" class="options-panel"></div>
+
+        <div class="info-box" id="cipherInfo"></div>
+      </section>
+
+      <section class="card text-card">
+        <div class="text-grid">
+          <label>
+            <span>Исходный текст</span>
+            <textarea id="inputText" placeholder="Введите текст здесь..."></textarea>
+          </label>
+
+          <div class="actions-row">
+            <button id="runBtn" class="primary-btn" type="button">Выполнить</button>
+            <button id="clearBtn" class="secondary-btn" type="button">Очистить</button>
+            <button id="copyBtn" class="secondary-btn" type="button">Копировать результат</button>
+          </div>
+
+          <label>
+            <span>Результат</span>
+            <textarea id="outputText" readonly placeholder="Здесь появится результат..."></textarea>
+          </label>
+        </div>
+      </section>
+
+      <section class="card help-card">
+        <h2>Что поддерживается</h2>
+        <div class="chips">
+          <span>Цезарь</span>
+          <span>ASCII</span>
+          <span>KOI8-R</span>
+          <span>Морзе</span>
+          <span>Виженер</span>
+          <span>Бэкон</span>
+          <span>Атбаш</span>
+          <span>Гронсфельд</span>
+          <span>Полибий</span>
+          <span>Плейфер</span>
+        </div>
+        <p>
+          Для классических шифров с ключом приложение старается сохранять пробелы и знаки препинания.
+          Там, где у алгоритма есть исторические ограничения, рядом появится подсказка.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
