@@ -32,23 +32,9 @@ body {
 }
 
 .hero {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  align-items: flex-start;
   margin-bottom: 28px;
 }
 
-.eyebrow {
-  display: inline-block;
-  padding: 8px 12px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  color: #c4ddff;
-  background: rgba(96, 165, 250, 0.08);
-  margin: 0 0 14px;
-  font-size: 13px;
-}
 
 h1 {
   margin: 0 0 10px;
@@ -62,23 +48,6 @@ h1 {
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
-}
-
-.hero-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-end;
-}
-
-.hero-badges span,
-.chips span {
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: rgba(15, 23, 42, 0.6);
-  border: 1px solid var(--border);
-  color: #dceaff;
-  font-size: 14px;
 }
 
 .grid {
@@ -95,14 +64,12 @@ h1 {
   backdrop-filter: blur(12px);
 }
 
-.controls-card,
-.help-card {
+.controls-card {
   padding: 22px;
 }
 
 .text-card {
   padding: 24px;
-  grid-row: span 2;
 }
 
 .card-title-row {
@@ -213,19 +180,6 @@ button:hover {
   font-size: 14px;
 }
 
-.help-card p {
-  color: var(--muted);
-  line-height: 1.65;
-  margin-top: 18px;
-}
-
-.chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 18px;
-}
-
 .toast {
   position: fixed;
   bottom: 24px;
@@ -260,17 +214,7 @@ button:hover {
 }
 
 @media (max-width: 960px) {
-  .hero,
   .grid {
     grid-template-columns: 1fr;
-    display: grid;
-  }
-
-  .text-card {
-    grid-row: auto;
-  }
-
-  .hero-badges {
-    justify-content: flex-start;
   }
 }
